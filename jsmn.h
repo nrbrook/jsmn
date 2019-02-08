@@ -36,6 +36,8 @@ enum jsmnerr {
  * type		type (object, array, string etc.)
  * start	start position in JSON data string
  * end		end position in JSON data string
+ * size		if array, number of array elements, if an object, number of keys, otherwise 0
+ * parent	the index of the parent token if there is one, otherwise -1
  */
 typedef struct {
 	jsmntype_t type;
